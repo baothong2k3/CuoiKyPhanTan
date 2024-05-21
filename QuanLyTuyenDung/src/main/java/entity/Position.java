@@ -10,8 +10,11 @@ package entity;/*
  */
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.util.List;
 @Getter
@@ -31,23 +34,23 @@ public class Position implements Serializable {
     private List<Candidate> candidates;
     public Position() {
     }
-    public Position(String id, String name, String description, double salary, int number) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.salary = salary;
+
+    public Position(int number, double salary, String description, String name, String id) {
         this.number = number;
+        this.salary = salary;
+        this.description = description;
+        this.name = name;
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "Position{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
+                "number=" + number +
                 ", salary=" + salary +
-                ", number=" + number +
-                ", candidates=" + candidates +
+                ", description='" + description + '\'' +
+                ", name='" + name + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

@@ -21,6 +21,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "certificates")
 public class Certificate implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
     @Column(name = "certificate_id")
     private String id;

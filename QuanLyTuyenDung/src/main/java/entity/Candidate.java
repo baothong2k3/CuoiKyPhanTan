@@ -41,6 +41,8 @@ public class Candidate implements Serializable {
 
     @OneToMany(mappedBy = "candidate", fetch = FetchType.LAZY)
     private List<Certificate> certificates;
+    @OneToMany(mappedBy = "candidate", fetch = FetchType.LAZY)
+    private List<Experience> experiences;
     public Candidate() {
     }
 

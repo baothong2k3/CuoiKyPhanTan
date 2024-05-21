@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="QuanLyTuyenDung:jar">
+    <output-path>$PROJECT_DIR$/../QuanLyTuyenDung_Client/lib</output-path>
+    <root id="archive" name="QuanLyTuyenDung.jar">
+      <element id="directory" name="entity">
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Candidate.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Certificate.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Experience.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Position.class" />
+      </element>
+    </root>
+  </artifact>
+</component>
