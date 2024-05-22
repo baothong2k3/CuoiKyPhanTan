@@ -32,7 +32,7 @@ public class Handler implements Runnable {
     private Socket socket;
     private CandidateDAO candidateDAO;
     private PositionDAO positionDAO;
-    private EntityManager em = null;
+    private EntityManager em;
 
     public Handler(Socket socket) {
         this.socket = socket;
