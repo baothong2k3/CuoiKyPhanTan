@@ -1,3 +1,11 @@
+<dependency>
+            <groupId>lib</groupId>
+            <artifactId>lid</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/lib-1.0.jar</systemPath>
+</dependency>
+----------------------------------------------------------------------------
 <persistence-unit name="OnTapJPA_SocKet_sql">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
