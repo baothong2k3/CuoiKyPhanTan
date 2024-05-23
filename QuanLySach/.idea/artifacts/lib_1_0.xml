@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lib-1.0">
+    <output-path>$PROJECT_DIR$/../QuanLySach_Client/lib</output-path>
+    <root id="archive" name="lib-1.0.jar">
+      <element id="directory" name="entity">
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Book.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/BookTranslation.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Person.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Publisher.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/entity/Reviews.class" />
+      </element>
+    </root>
+  </artifact>
+</component>

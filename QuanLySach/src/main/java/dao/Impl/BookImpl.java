@@ -26,16 +26,20 @@ public class BookImpl implements BookDao {
         em = Persistence.createEntityManagerFactory("OnTapJPA_SocKet_sql").createEntityManager();
     }
 
+    //    @Override
+//    public List<Book> listRatedBooks(String author, int rating) {
+//        String query = "SELECT b FROM Book b JOIN b.reviews r WHERE :author MEMBER OF b. AND r.rating >= :rating";
+//        return em.createQuery(query, Book.class)
+//                .setParameter("author", author)
+//                .setParameter("rating", rating)
+//                .getResultList();
+//    }
     @Override
     public List<Book> listRatedBooks(String author, int rating) {
-        String sql = "SELECT b.ISBN, b.name, b.num_of_pages, b.price, b.publish_year " +
-                "FROM books b " +
-                "JOIN books_authors ba ON b.ISBN = ba.ISBN " +
-                "JOIN reviews r ON b.ISBN = r.ISBN " +
-                "WHERE ba.author = ? AND r.rating >= ?";
-        return em.createNativeQuery(sql, Book.class)
-                .setParameter(1, author)
-                .setParameter(2, rating)
+        String jpql = "SELECT b FROM Book b JOIN b.books_authors a JOIN b.reviews r WHERE a = :author AND r.rating >= :rating";
+        return em.createQuery(jpql, Book.class)
+                .setParameter("author", author)
+                .setParameter("rating", rating)
                 .getResultList();
     }
 
